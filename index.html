@@ -5,9 +5,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DAGERTEC</title>
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="personalice.css">
 </head>
 <body>
-    <h1>Hola mundo!</h1>
+    <!--Barra de navegación-->
+    <nav class="navbar navbar-expand-sm navbar-light bg-light fixed-top">
+        <a href="index.html" class="navbar-brand">
+            <img src="img/dagertec.png" width="30" height="30" class="d-inline-block align-top" alt="DAGERTEC" loading="lazy">
+            DAGERTEC
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01"
+            aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active"><a href="index.html" class="nav-link">Inicio</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Nosotros</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Servicios</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Contacto</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!--Titulo del sitio web-->
+    <div class="jumbotron jumbotron-fluid mt-5" id="jumboindex">
+        <div class="container">
+            <h1>Transforme su negocio, hagalo <span style="background-color: blue;">Digital.</span></h1>
+            <p>Aumente la percepción de su marca, reduzca sus costos, trabaje con seguridad, son algunas de las ventajas de
+                esta poderosa herramienta.</p>
+        </div>
+    </div>
+
+
     <!--scripts para el funcionamiento de bootstrap-->
     <script src="node_modules/jquery/dist/jquery.js"></script>
     <script src="node_modules/popper.js/dist/popper.js"></script>
