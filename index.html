@@ -10,7 +10,8 @@
 <body>
     <!--Barra de navegación-->
     <nav class="navbar navbar-expand-sm navbar-light bg-light fixed-top">
-        <a href="index.html" class="navbar-brand">
+      <div class="container">        
+	<a href="index.html" class="navbar-brand">
             <img src="img/dagertec.png" width="30" height="30" class="d-inline-block align-top" alt="DAGERTEC" loading="lazy">
             DAGERTEC
         </a>
@@ -26,7 +27,9 @@
                 <li class="nav-item"><a href="#" class="nav-link">Contacto</a></li>
             </ul>
         </div>
+      </div>
     </nav>
+    <!--Barra de navegación-->
 
     <!--Titulo del sitio web-->
     <div class="jumbotron jumbotron-fluid mt-5" id="jumboindex">
@@ -36,7 +39,33 @@
                 esta poderosa herramienta.</p>
         </div>
     </div>
+    <!--Titulo del sitio web-->
 
+    <!--carrousel-->
+    	<div class="container">
+	  <div id="marquesina" class="carousel slide" data-ride="carousel">
+	    <div class="carousel-inner">
+	      <div class="carousel-item active"><img class="d-block w-100" src="img/slide1.png" alt=""></div>
+	      <div class="carousel-item"> <img class="d-block w-100" src="img/slide2.png" alt=""></div>
+	      <div class="carousel-item"> <img class="d-block w-100" src="img/slide3.png" alt=""></div>
+	    </div>
+	  </div>
+	</div>	
+    <!--carrousel-->
+    <!--Nosotros-->
+    <div class="container-fluid" id="nosotros">
+      <div class="container">
+        <div class="row flex-row">
+          <div class="col-md-6">
+	    <h1>Visión</h1>
+	  </div>
+          <div class="col-md-6">
+	    <h1>Misión</h1>
+	  </div>
+        </div>
+      </div>
+    </div>
+    <!--Nosotros-->
 
     <!--scripts para el funcionamiento de bootstrap-->
     <script src="node_modules/jquery/dist/jquery.js"></script>
