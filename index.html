@@ -6,9 +6,11 @@
     <title>DAGERTEC</title>
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
     <link rel="stylesheet" href="personalice.css">
+    <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.min.css">
 </head>
 <body>
     <!--Barra de navegación-->
+    <div id="inicio"></div>
     <nav class="navbar navbar-expand-sm navbar-light bg-light fixed-top">
       <div class="container">        
 	<a href="index.html" class="navbar-brand">
@@ -21,10 +23,10 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
             <ul class="navbar-nav mr-auto">
-                <li class="nav-item active"><a href="index.html" class="nav-link">Inicio</a></li>
-                <li class="nav-item"><a href="#" class="nav-link">Nosotros</a></li>
-                <li class="nav-item"><a href="#" class="nav-link">Servicios</a></li>
-                <li class="nav-item"><a href="#" class="nav-link">Contacto</a></li>
+                <li class="nav-item active"><a onclick="topFunction" href="#" class="nav-link">Inicio</a></li>
+                <li class="nav-item"><a href="#nosotros" class="nav-link">Nosotros</a></li>
+                <li class="nav-item"><a href="#servicios" class="nav-link">Servicios</a></li>
+                <li class="nav-item"><a href="#contact" class="nav-link">Contacto</a></li>
             </ul>
         </div>
       </div>
@@ -32,7 +34,7 @@
     <!--Barra de navegación-->
 
     <!--Titulo del sitio web-->
-    <div class="jumbotron jumbotron-fluid mt-5" id="jumboindex">
+    <div class="jumbotron jumbotron-fluid mt-5 mb-5" id="jumboindex">
         <div class="container">
             <h1>Transforme su negocio, hagalo <span style="background-color: blue;">Digital.</span></h1>
             <p>Aumente la percepción de su marca, reduzca sus costos, trabaje con seguridad, son algunas de las ventajas de
@@ -42,34 +44,167 @@
     <!--Titulo del sitio web-->
 
     <!--carrousel-->
-    	<div class="container">
-	  <div id="marquesina" class="carousel slide" data-ride="carousel">
-	    <div class="carousel-inner">
-	      <div class="carousel-item active"><img class="d-block w-100" src="img/slide1.png" alt=""></div>
-	      <div class="carousel-item"> <img class="d-block w-100" src="img/slide2.png" alt=""></div>
-	      <div class="carousel-item"> <img class="d-block w-100" src="img/slide3.png" alt=""></div>
-	    </div>
-	  </div>
-	</div>	
+    <div class="container mb-5">
+      <div id="marquesina" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active"><img class="d-block w-100" src="img/slide1.png" alt=""></div>
+          <div class="carousel-item"> <img class="d-block w-100" src="img/slide2.png" alt=""></div>
+          <div class="carousel-item"> <img class="d-block w-100" src="img/slide3.png" alt=""></div>
+        </div>
+      </div>
+    </div>
     <!--carrousel-->
     <!--Nosotros-->
     <div class="container-fluid" id="nosotros">
+      <h1>SOBRE NOSOTROS</h1>
       <div class="container">
         <div class="row flex-row">
+          <div class="col-md-6" id="vision">
+            <img src="/img/vision.jpg" alt="vision" class="rounded-circle center-image" height="300px" width="auto">
+            <h1>Visión</h1>
+            <p>Llevar a toda persona u organización programas y servicios que den respuesta a sus necesidades de información.</p>
+          </div>
           <div class="col-md-6">
-	    <h1>Visión</h1>
-	  </div>
-          <div class="col-md-6">
-	    <h1>Misión</h1>
-	  </div>
+            <img src="/img/mision.jpg" alt="mision" class="rounded-circle center-image" height="300px" width="auto">
+            <h1>Misión</h1>
+            <p>Ser una solución rentable para llevar a las personas u organizaciones a la digitalización de sus labores individuales y profesionales.</p>
+          </div>
         </div>
       </div>
     </div>
     <!--Nosotros-->
+    <!--Servicios-->
+    <div class="container-fluid" id="servicios">
+      <div class="container">
+        <h1>NUESTROS SERVICIOS</h1>
+        <div class="card-columns">
+          <div class="card">
+            <img src="/img/website.jpg" class="card-img-top" alt="website">
+            <div class="card-body">
+              <h5 class="card-title">Paginas Web</h5>
+              <p class="card-text">Adquiera su propia pagina web, personal o comercial y anuncie su presencia en internet.</p>
+            </div>
+          </div>
+          <div class="card bg-success text-white text-center p-3">
+            <blockquote class="blockquote mb-0">
+              <p>Proteja su ordenador de amenazas informaticas con un antivirus, nosotros le sugerimos el que mejor se adapte a su configuración y lo instalamos por usted.</p>
+              <footer class="blockquote-footer text-white">
+                <small>
+                  Completamente Legal
+                </small>
+              </footer>
+            </blockquote>
+          </div>
+          <div class="card bg-primary text-white text-center p-3">
+            <blockquote class="blockquote mb-0">
+              <p>Si aun no cuenta con una licencia para Microsoft Windows, nosotros la instalamos por usted.</p>
+              <footer class="blockquote-footer text-white">
+                <small>
+                  Completamente Legal
+                </small>
+              </footer>
+            </blockquote>
+          </div>
+          <div class="card">
+            <img src="/img/software.jpg" class="card-img-top" alt="software">
+            <div class="card-body">
+              <h5 class="card-title">Software Personalizado</h5>
+              <p class="card-text">En ocaciones es mejor tener su propia solucion de software para su empresa, nosotros podemos ayudarle con eso.</p>
+            </div>
+          </div>
+        </div>
+        <h3>Para conocer los precios de nuestros productos y servicios, dirigirse al apartado de contacto.</h3>
+      </div>
+    </div>
+    <!--Servicios-->
+    <!--Contacto-->
+    <div id="contact"></div>
+    <div class="container-fluid" id="contacto">
+      <div class="container">
+        <h1 class="titulo">CONTACTA CON NOSOTROS</h1>
+        <div class="row flex-row">
+          <div class="col-sm-5">
+            <form id="form-contact" method="POST" action="email.php" role="form">
+              <div class="form-group">
+                <label for="cajaNombre">Nombre:</label>
+                <input type="text" name="nombre" id="cajaNombre" class="form-control" placeholder="Escriba aquí su nombre" required>
+              </div>
+
+              <div class="form-group">
+                <label for="cajaApellido">Apellido:</label>
+                <input type="text" name="apellido" id="cajaApellido" class="form-control" placeholder="Escriba aquí su apellido" required>
+              </div>
+
+              <div class="form-group">
+                <label for="cajaEmail">E-Mail:</label>
+                <input type="email" name="mail" id="cajaEmail" class="form-control" placeholder="nombre@servicio.com" required>
+              </div>
+
+              <div class="form-group">
+                <label for="cajaMensaje">Mensaje:</label>
+                <textarea class="form-control" id="cajaMensaje" name="mensaje" rows="3" required></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary btn-block">Enviar Mensaje</button>
+              <hr class="mt-4">
+              <h5>Información de Contacto</h5>
+              <table class="table table-sm table-borderless">
+                <tbody>
+                  <tr>
+                    <td><i class="fas fa-map-marker"></i></td>
+                    <td>8va. Calle 3-20 Col. Vasquez z.21, Guatemala</td>
+                  </tr>
+                  <tr>
+                    <td><i class="fas fa-mobile-alt"></i></td>
+                    <td>5116-3409</td>
+                  </tr>
+                  <tr>
+                    <td><i class="fas fa-envelope"></i></td>
+                    <td>d4g3r0@gmail.com</td>
+                  </tr>
+                </tbody>
+              </table>
+              <div id="social">
+                <h5>Redes Sociales</h5>
+                <a href="https://www.facebook.com/Dagertec" target="_blank" rel="noopener noreferrer"><i
+                    class="fab fa-facebook fa-2x"></i></a>
+                <a href="https://twitter.com/D4GERTEC" target="_blank" rel="noopener noreferrer"><i
+                    class="fab fa-twitter fa-2x"></i></a>
+                <a href="https://www.youtube.com/channel/UCBJ2RlFHo8bNkVUFI6NMAcw?view_as=subscriber" target="_blank" rel="noopener noreferrer"><i
+                    class="fab fa-youtube fa-2x"></i></a>
+              </div>
+            </form>
+            <br>
+          </div>
+          <div class="col-sm-7 align-self-center">
+            <h1 class="text-center">¿Necesita Ayuda?</h1>
+            <p class="text-center mt-4">Comuníquese con nuestro equipo, déjenos un mensaje con su pregunta.</p>
+            <ul class="mt-5 mb-5">
+              <li class="mt-1">Si nesecita asistencia técnica sobre algun software personalizado, especificar en el mensaje su nombre, numero de contacto un técnico se pondra en contacto con usted.</li>
+              <li class="mt-4">Si necesita información sobre una solución antivirus, especificar un numero de contacto para que un técnico se comunique con usted.</li>
+              <li class="mt-4">Si desea comprar una licencia para Windows 10, especificar un número de contacto para que un técnico se cumnique con usted.</li>
+              <li class="mt-4">Si desea información o presupuesto para un software personalizado, especificar su nombre y numero de contacto, un asesor se pondra en contacto con usted.</li>
+              <li class="mt-4">Si desea informacion y presupuesto para una pagina web, especificar su nombre y numero de contacto, un asesor se pondra en contacto con usted.</li>
+            </ul>
+            <hr>
+            <div id="copyright">
+              &copy; DAGERTEC - 2020
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--Contacto-->
 
     <!--scripts para el funcionamiento de bootstrap-->
     <script src="node_modules/jquery/dist/jquery.js"></script>
     <script src="node_modules/popper.js/dist/popper.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="node_modules/@fortawesome/fontawesome-free/js/all.min.js"></script>
+    <script>
+      function topFunction() {
+          document.body.scrollTop = 0;
+          document.documentElement.scrollTop = 0;
+        }
+    </script>
 </body>
 </html>
