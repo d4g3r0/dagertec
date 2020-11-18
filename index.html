@@ -7,30 +7,32 @@
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
     <link rel="stylesheet" href="personalice.css">
     <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.min.css">
+    <link rel="icon" type="image/svg+xml" href="img/logo_DAGERTEC.svg" sizes="any">
 </head>
 <body>
     <!--Barra de navegación-->
-    <div id="inicio"></div>
-    <nav class="navbar navbar-expand-sm navbar-light bg-light fixed-top">
-      <div class="container">        
-	<a href="index.html" class="navbar-brand">
-            <img src="img/dagertec.png" width="30" height="30" class="d-inline-block align-top" alt="DAGERTEC" loading="lazy">
-            DAGERTEC
-        </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01"
-            aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item active"><a onclick="topFunction" href="#" class="nav-link">Inicio</a></li>
-                <li class="nav-item"><a href="#nosotros" class="nav-link">Nosotros</a></li>
-                <li class="nav-item"><a href="#servicios" class="nav-link">Servicios</a></li>
-                <li class="nav-item"><a href="#contact" class="nav-link">Contacto</a></li>
-            </ul>
+    <div id="topheader">
+      <nav class="navbar navbar-expand-sm navbar-light bg-light fixed-top">
+        <div class="container">        
+          <a href="index.html" class="navbar-brand">
+              <img src="img/navbar_logo.png" width="30" height="30" class="d-inline-block align-top" alt="DAGERTEC" loading="lazy">
+              DAGERTEC
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01"
+              aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+              <ul class="navbar-nav mr-auto">
+                  <li class="nav-item active"><a onclick="topFunction" href="#" class="nav-link">Inicio</a></li>
+                  <li class="nav-item"><a href="#nosotros" class="nav-link">Nosotros</a></li>
+                  <li class="nav-item"><a href="#servicios" class="nav-link">Servicios</a></li>
+                  <li class="nav-item"><a href="#contact" class="nav-link">Contacto</a></li>
+              </ul>
+          </div>
         </div>
-      </div>
-    </nav>
+      </nav>
+    </div>
     <!--Barra de navegación-->
 
     <!--Titulo del sitio web-->
@@ -159,7 +161,7 @@
                   </tr>
                   <tr>
                     <td><i class="fas fa-envelope"></i></td>
-                    <td>d4g3r0@gmail.com</td>
+                    <td><a href="mailto:d4g3r0@gmail.com">d4g3r0@gmail.com</a></td>
                   </tr>
                 </tbody>
               </table>
@@ -205,6 +207,12 @@
           document.body.scrollTop = 0;
           document.documentElement.scrollTop = 0;
         }
+    </script>
+    <script>
+      $( '#topheader .navbar-nav a' ).on( 'click',function () {
+        $( '#topheader .navbar-nav' ).find( 'li.active').removeClass( 'active' );
+        $( this ).parent( 'li' ).addClass( 'active' );
+      });
     </script>
 </body>
 </html>
