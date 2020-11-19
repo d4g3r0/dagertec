@@ -126,7 +126,7 @@
         <h1 class="titulo">CONTACTA CON NOSOTROS</h1>
         <div class="row flex-row">
           <div class="col-sm-5">
-            <form id="form-contact" method="POST" action="email.php" role="form">
+            <form id="form-contact" method="POST" action="javascript:sendEmail()">
               <div class="form-group">
                 <label for="cajaNombre">Nombre:</label>
                 <input type="text" name="nombre" id="cajaNombre" class="form-control" placeholder="Escriba aquí su nombre" required>
@@ -146,7 +146,7 @@
                 <label for="cajaMensaje">Mensaje:</label>
                 <textarea class="form-control" id="cajaMensaje" name="mensaje" rows="3" required></textarea>
               </div>
-              <button type="submit" class="btn btn-primary btn-block">Enviar Mensaje</button>
+              <button type="submit" value="Send Email" class="btn btn-primary btn-block">Enviar Mensaje</button>
               <hr class="mt-4">
               <h5>Información de Contacto</h5>
               <table class="table table-sm table-borderless">
@@ -202,6 +202,7 @@
     <script src="node_modules/popper.js/dist/popper.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
     <script src="node_modules/@fortawesome/fontawesome-free/js/all.min.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
     <script>
       function topFunction() {
           document.body.scrollTop = 0;
@@ -213,6 +214,20 @@
         $( '#topheader .navbar-nav' ).find( 'li.active').removeClass( 'active' );
         $( this ).parent( 'li' ).addClass( 'active' );
       });
+    </script>
+    <script>
+      function sendEmail() {
+        Email.send({
+            SecureToken : "884e58fc-453c-4b46-90e3-34f63ef6a9f7",
+            To : 'd4g3r0@gmail.com',
+            From : document.getElementById("cajaEmail").value,
+            Subject : "Mensaje desde la web",
+            Body : "Enviado por " + document.getElementById("cajaNombre").value+" "+ document.getElementById("cajaApellido").value + " " + document.getElementById("cajaMensaje").value
+        }).then(
+          message => alert(message)
+        );
+        location.reload();
+      }
     </script>
 </body>
 </html>
